@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+main {
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  padding: 1em;
+}
+.shadow{
+  padding: 1.2em 2.5em;
+  border-radius: 4px;
+  box-shadow: 0px 5px 40px -10px rgba(105, 105, 105, 0.57);
+  margin: 2em auto;
+}
+.form{
+  font-size: 16px;
+  width: 15%;
+}
+.field{
+  padding: 5px 0;
+}
+input, select{
+  width: 50%;
+  padding: 5px;
+}
+label{
+  display: inline-block;
+  min-width: 40%;
+}
+button {
+  border: none;
+  background: #404040;
+  color: #ffffff;
+  font-weight: 100;
+  padding: .85em 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  margin: 1em auto 0;
+  display: table;
+}
+
+button:hover:enabled {
+  color: #404040;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: yellow;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+
+button:disabled{
+  cursor: initial;
+  opacity: 0.2;
+}
+hr{
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.balance{
+  width: 15%;
+}
+.game{
+  width: 50%;
+}
+.big-text{
+  font-size: 20px;
+}
+.lottery{
+  margin-bottom: 1em;
+}
+.slot-machine{
+  margin-top: 1em;
+}
+.lottery .big-text{
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin: 0 10px;
+  color: orange;
+}
+.slot {
+  background:url("images/reel_normal.png") repeat-y;
+  width: 86px;
+  height: 70px;
+  display: inline-block;
+  border: 1px solid #717171;
+  background-position: 0 4px;
+}
+.motion {
+  background:url("images/reel_blur.png") repeat-y;
+}
+#result{
+  font-weight: bold;
+  font-size: 16px;
+  margin: 1.5em 0 1em;
+}
+#log{
+  font-weight: bold;
+  font-size: 16px;
+  margin: 1.5em 0 1em;
+}
+#bet{
+  width: 60px;
+  padding: 5px;
+  margin-left: -10px;
+}

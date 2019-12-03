@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Slot Machine</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="static/jquery.spritely.js"></script>
+    <script src="static/jquery.backgroundPosition.js"></script>
+    <script src="static/slot.js"></script>
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+  <body>
+
+    <div>
+      <main>
+        <div class='shadow form'>
+          <div class="field">
+            <label>Age:</label>
+            <input id="age" type="number" />
+          </div>
+          <div class="field">
+            <label>Gender:</label>
+            <select id="gender">
+              <option disabled value="">Select</option>
+              <option value="MALE">Male</option>
+              <option value="FEMALE">Female</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>ID:</label>
+            <input id="id" type="text" />
+          </div>
+          <button id="play-btn">Play Now</button>
+        </div>
+
+        <div id="slot-machine">
+          <hr/>
+          <center class='balance shadow'>
+            <strong>Total Balance: <span id="balance" class='big-text'></span></strong>
+          </center>
+          <center class='game shadow'>
+            <div class='lottery'>
+              Winning lottery: <span id="winning-lottery" class='big-text sep'></span>
+            </div>
+            <hr />
+            <div class='slot-machine'>
+              <div id="slot1" class="slot"></div>
+              <div id="slot2" class="slot"></div>
+              <div id="slot3" class="slot"></div>
+              <div id="slot4" class="slot"></div>
+              <div id="slot5" class="slot"></div>
+              <div id="slot6" class="slot"></div>
+              <div class="clear"></div>
+            </div>
+            <div id="result"></div>
+            <label>Current Bet:</label>
+            <input id="bet" min="1" max="5" type="number" /> (Max: 5)
+            <div><button id="control">Start</button></div>
+            <div id="log"></div>
+          </center>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2
+      })
+      $(document).ready(function() {
+        const balance = 5;
+        // const winningLotteryNumber = Math.floor(100000 + Math.random() * 900000)
+        $('#slot-machine').hide();
+        $('#age').val(28);
+        $('#gender').val("MALE");
+        $('#id').val(ID());
+        $('#bet').val(1);
+
+        // $("#play-btn").click(function () {
+        //   const age = $("#age").val();
+        //   const gender = $("#gender").val();
+        //   const id = $("#id").val();
+        //   $('#slot-machine').show();
+        //   $('#balance').text(formatter.format(balance));
+        //   $('#winning-lottery').text(winningLotteryNumber);
+        // })
+      });
+      var ID = function () {
+        return Math.random().toString(36).substr(2, 9);
+      };
+    </script>
+  </body>
+</html>
